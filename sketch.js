@@ -72,6 +72,6 @@ graphic.pop();
 
 function keyPressed() {
   if(key == 's'){
-    saveCanvas('background_v2', 'png');
+    saveCanvas('background_v1', 'png');
   }
 }
