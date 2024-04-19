@@ -1,3 +1,6 @@
+let fps = 60;
+let vidLength = 30;
+
 let graphic;
 let sx,sy,sw,sh,dx,dy,dw,dh;
 
@@ -26,6 +29,10 @@ function setup() {
 }
 
 function draw() {
+  //   if (frameCount === 1) {
+  //   capturer.start();
+  // }
+
   imgIndex = floor(random(0,imgAmt)); 
 
 let imgWidth = size[sizeIndex];
@@ -54,4 +61,17 @@ graphic.pop();
     y = 0;
   }
   image(graphic,x,y,size[sizeIndex],size[sizeIndex]); 
+
+  //   if (frameCount < fps * vidLength) {
+  //   capturer.capture(canvas);
+  // } else if (frameCount === fps * vidLength) {
+  //   capturer.save();
+  //   capturer.stop();
+  // }
+}
+
+function keyPressed() {
+  if(key == 's'){
+    saveCanvas('background_v2', 'png');
+  }
 }
